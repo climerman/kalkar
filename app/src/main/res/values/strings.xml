@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Kalkar</string>
+    <string name="content_header">Tehete statistika</string>
+    <string name="stats_header">Päevastatistika</string>
+    <string name="operations_header">Arvutamised</string>
 </resources>

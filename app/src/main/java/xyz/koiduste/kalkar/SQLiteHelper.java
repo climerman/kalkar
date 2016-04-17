@@ -13,27 +13,27 @@ public class SQLiteHelper extends SQLiteOpenHelper {
     private static final String TAG = SQLiteHelper.class.getName();
     private final Context context;
 
-    private static final String TABLE_OPERANDS = "Operands";
-    private static final String COLUMN_OPERANDS_ID = "_id";
-    private static final String COLUMN_OPERANDS_OPERAND = "operand";
-    private static final String COLUMN_OPERANDS_LIFETIMECOUNTER = "lifetimeCounter";
-    private static final String[] ALLCOLUMNS_OPERANDS = {COLUMN_OPERANDS_ID, COLUMN_OPERANDS_OPERAND, COLUMN_OPERANDS_LIFETIMECOUNTER};
+    public static final String TABLE_OPERANDS = "Operands";
+    public static final String COLUMN_OPERANDS_ID = "_id";
+    public static final String COLUMN_OPERANDS_OPERAND = "operand";
+    public static final String COLUMN_OPERANDS_LIFETIMECOUNTER = "lifetimeCounter";
+    public static final String[] ALLCOLUMNS_OPERANDS = {COLUMN_OPERANDS_ID, COLUMN_OPERANDS_OPERAND, COLUMN_OPERANDS_LIFETIMECOUNTER};
 
-    private static final String TABLE_STATS = "Statistics";
-    private static final String COLUMN_STATS_ID = "_id";
-    private static final String COLUMN_STATS_TIMESTAMP = "timestamp";
-    private static final String COLUMN_STATS_OPERAND_ID = "operandId";
-    private static final String COLUMN_STATS_DAYCOUNTER = "dayCounter";
-    private static final String[] ALLCOLUMNS_STATS = {COLUMN_STATS_ID, COLUMN_STATS_TIMESTAMP, COLUMN_STATS_OPERAND_ID, COLUMN_STATS_DAYCOUNTER};
+    public static final String TABLE_STATS = "Statistics";
+    public static final String COLUMN_STATS_ID = "_id";
+    public static final String COLUMN_STATS_DAYSTAMP = "timestamp";
+    public static final String COLUMN_STATS_OPERAND_ID = "operandId";
+    public static final String COLUMN_STATS_DAYCOUNTER = "dayCounter";
+    public static final String[] ALLCOLUMNS_STATS = {COLUMN_STATS_ID, COLUMN_STATS_DAYSTAMP, COLUMN_STATS_OPERAND_ID, COLUMN_STATS_DAYCOUNTER};
 
-    private static final String TABLE_OPERATIONS = "Operations";
-    private static final String COLUMN_OPERATIONS_ID = "_id";
-    private static final String COLUMN_OPERATIONS_OPERAND_ID = "operandId";
-    private static final String COLUMN_OPERATIONS_NUM1 = "num1";
-    private static final String COLUMN_OPERATIONS_NUM2 = "num2";
-    private static final String COLUMN_OPERATIONS_RESULT = "result";
-    private static final String COLUMN_OPERATIONS_TIMESTAMP = "timestamp";
-    private static final String[] ALLCOLUMNS_OPERATIONS = {COLUMN_OPERATIONS_ID, COLUMN_OPERATIONS_OPERAND_ID, COLUMN_OPERATIONS_NUM1, COLUMN_OPERATIONS_NUM2, COLUMN_OPERATIONS_RESULT, COLUMN_OPERATIONS_RESULT, COLUMN_OPERATIONS_TIMESTAMP};
+    public static final String TABLE_OPERATIONS = "Operations";
+    public static final String COLUMN_OPERATIONS_ID = "_id";
+    public static final String COLUMN_OPERATIONS_OPERAND_ID = "operandId";
+    public static final String COLUMN_OPERATIONS_NUM1 = "num1";
+    public static final String COLUMN_OPERATIONS_NUM2 = "num2";
+    public static final String COLUMN_OPERATIONS_RESULT = "result";
+    public static final String COLUMN_OPERATIONS_TIMESTAMP = "timestamp";
+    public static final String[] ALLCOLUMNS_OPERATIONS = {COLUMN_OPERATIONS_ID, COLUMN_OPERATIONS_OPERAND_ID, COLUMN_OPERATIONS_NUM1, COLUMN_OPERATIONS_NUM2, COLUMN_OPERATIONS_RESULT, COLUMN_OPERATIONS_RESULT, COLUMN_OPERATIONS_TIMESTAMP};
 
     //Creation SQL statements
 
@@ -47,7 +47,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
     private static final String DB_CREATE_STATS = "create table"
             + TABLE_STATS + "("
             + COLUMN_STATS_ID + "integer primary key autoincrement, "
-            + COLUMN_STATS_TIMESTAMP + "integer not null, "
+            + COLUMN_STATS_DAYSTAMP + "integer not null, "
             + COLUMN_STATS_OPERAND_ID + "integer not null, "
             + COLUMN_STATS_DAYCOUNTER + "integer not null);";
 
