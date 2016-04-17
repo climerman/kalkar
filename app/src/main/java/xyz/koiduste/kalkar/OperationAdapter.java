@@ -36,7 +36,7 @@ public class OperationAdapter extends CursorAdapter {
     // second pass - final draw
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
-        TextView textViewName =(TextView) view.findViewById(R.id.operationStatsHeader);
+        TextView textViewName =(TextView) view.findViewById(R.id.operationViewHeader);
         Operation op = uow.operationRepo.cursorToEntity(cursor);
         textViewName.setText(op.toString());
     }

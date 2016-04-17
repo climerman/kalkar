@@ -1,6 +1,12 @@
 <resources>
     <string name="app_name">Kalkar</string>
-    <string name="content_header">Tehete statistika</string>
+    <string name="operand_header">Tehete statistika</string>
     <string name="stats_header">Päevastatistika</string>
-    <string name="operations_header">Arvutamised</string>
+    <string name="operation_header">Arvutamised</string>
+    <string name="test" />
+    <string name="action_refresh">Värskenda</string>
+    <string name="action_delete">Kustuta</string>
+    <string name="action_show_history">Arvutamised</string>
+    <string name="action_show_daysstats">Päevastatistika</string>
+    <string name="action_show_operandstats">Tehete statistika</string>
 </resources>

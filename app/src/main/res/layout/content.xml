@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -11,19 +11,20 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="xyz.koiduste.kalkar.MainActivity"
     tools:showIn="@layout/activity_main">
-    <TextView
-        android:id="@+id/operationViewHeader"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:text="@string/operation_header"
-        android:textSize="24dp"/>
 
-    <ListView
-        android:id="@+id/operationViewList"
+    <TextView
+        android:id="@+id/text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/operationViewHeader"
-        android:fastScrollEnabled="false"/>
-</RelativeLayout>
+        android:text="Statistika tehete järgi"
+        android:textSize="26dp"
+        android:background="@color/colorPrimaryDark"
+        />
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".20"
+        android:fastScrollEnabled="false"
+        android:layout_below="@+id/text"/>
+    </RelativeLayout>

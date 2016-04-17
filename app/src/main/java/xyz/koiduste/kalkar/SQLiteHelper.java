@@ -37,28 +37,28 @@ public class SQLiteHelper extends SQLiteOpenHelper {
 
     //Creation SQL statements
 
-    private static final String DB_CREATE_OPERANDS = "create table"
+    private static final String DB_CREATE_OPERANDS = "create table "
             + TABLE_OPERANDS + "("
-            + COLUMN_OPERANDS_ID + "integer primary key autoincrement, "
-            + COLUMN_OPERANDS_OPERAND + "text not null, "
-            + COLUMN_OPERANDS_LIFETIMECOUNTER + "integer not null);";
+            + COLUMN_OPERANDS_ID + " integer primary key autoincrement, "
+            + COLUMN_OPERANDS_OPERAND + " text not null, "
+            + COLUMN_OPERANDS_LIFETIMECOUNTER + " integer not null);";
 
 
-    private static final String DB_CREATE_STATS = "create table"
+    private static final String DB_CREATE_STATS = "create table "
             + TABLE_STATS + "("
-            + COLUMN_STATS_ID + "integer primary key autoincrement, "
-            + COLUMN_STATS_DAYSTAMP + "integer not null, "
-            + COLUMN_STATS_OPERAND_ID + "integer not null, "
-            + COLUMN_STATS_DAYCOUNTER + "integer not null);";
+            + COLUMN_STATS_ID + " integer primary key autoincrement, "
+            + COLUMN_STATS_DAYSTAMP + " integer not null, "
+            + COLUMN_STATS_OPERAND_ID + " integer not null, "
+            + COLUMN_STATS_DAYCOUNTER + " integer not null);";
 
-    private static final String DB_CREATE_OPERATIONS = "create table"
+    private static final String DB_CREATE_OPERATIONS = "create table "
             + TABLE_OPERATIONS + "("
-            + COLUMN_OPERATIONS_ID + "integer primary key autoincrement, "
-            + COLUMN_OPERATIONS_OPERAND_ID + "integer not null, "
-            + COLUMN_OPERATIONS_NUM1 + "float not null, "
-            + COLUMN_OPERATIONS_NUM2 + "float not null, "
-            + COLUMN_OPERATIONS_RESULT + "float not null, "
-            + COLUMN_OPERATIONS_TIMESTAMP + "integer not null);";
+            + COLUMN_OPERATIONS_ID + " integer primary key autoincrement, "
+            + COLUMN_OPERATIONS_OPERAND_ID + " integer not null, "
+            + COLUMN_OPERATIONS_NUM1 + " float not null, "
+            + COLUMN_OPERATIONS_NUM2 + " float not null, "
+            + COLUMN_OPERATIONS_RESULT + " float not null, "
+            + COLUMN_OPERATIONS_TIMESTAMP + " integer not null);";
     //End of creation
 
     private static final String DB_NAME = "kalkar.db";

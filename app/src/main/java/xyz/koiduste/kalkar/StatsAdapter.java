@@ -36,7 +36,7 @@ public class StatsAdapter extends CursorAdapter{
     // second pass - final draw
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
-        TextView textViewName =(TextView) view.findViewById(R.id.statsHeader);
+        TextView textViewName =(TextView) view.findViewById(R.id.statsViewHeader);
 
         Stats Stats = uow.statsRepo.cursorToEntity(cursor);
         textViewName.setText(Stats.toString());
@@ -45,7 +45,7 @@ public class StatsAdapter extends CursorAdapter{
 
 
     private void displayOperations(View view, Context context, Stats operand) {
-        ListView listView = (ListView) view.findViewById(R.id.operationStatsListView);
+        ListView listView = (ListView) view.findViewById(R.id.operationViewList);
         OperationAdapter adapter = new OperationAdapter(context, uow.operationRepo.getByOperandId(operand.getOperandId()), uow);
         listView.setAdapter(adapter);
 

@@ -36,7 +36,7 @@ public class OperandAdapter extends CursorAdapter{
     // second pass - final draw
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
-        TextView textViewName =(TextView) view.findViewById(R.id.operandStatsHeader);
+        TextView textViewName =(TextView) view.findViewById(R.id.operandViewHeader);
 
         Operand op = uow.operandRepo.cursorToEntity(cursor);
         textViewName.setText(op.toString());
@@ -52,7 +52,7 @@ public class OperandAdapter extends CursorAdapter{
         // otherwise you will add same childs several times
         //operandsListView.removeAllViews();
 
-        ListView listView = (ListView) view.findViewById(R.id.statsListView);
+        ListView listView = (ListView) view.findViewById(R.id.statsViewList);
         StatsAdapter adapter = new StatsAdapter(context, uow.statsRepo.getCursorByOperandId(operand.getId()), uow);
         listView.setAdapter(adapter);
     }
